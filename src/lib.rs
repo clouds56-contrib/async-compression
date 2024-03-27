@@ -80,6 +80,14 @@
     doc = "`deflate` (*inactive*) | `DeflateEncoder`, `DeflateDecoder`"
 )]
 #![cfg_attr(
+    feature = "flate2",
+    doc = "`flate2` | [`FlateDecoder`](?search=FlateDecoder), [`FlateDecoder`](?search=FlateDecoder)"
+)]
+#![cfg_attr(
+    not(feature = "flate2"),
+    doc = "`flate2` (*inactive*) | `FlateDecoder`, `FlateDecoder`"
+)]
+#![cfg_attr(
     feature = "gzip",
     doc = "`gzip` | [`GzipEncoder`](?search=GzipEncoder), [`GzipDecoder`](?search=GzipDecoder)"
 )]
